@@ -5,7 +5,5 @@ vim.keymap.set('n', '<Leader>n', ':noh<CR>')
 vim.keymap.set('n', '<Leader>vtt', ':VimwikiTable<CR>')
 vim.keymap.set('n', '<Leader>vt ', ':VimwikiTable ')
 
-vim.keymap.set('n', '<Leader>t', ':VimwikiToggleListItem<CR>')
-
 -- Telescope
 vim.keymap.set('n', '<Leader>f', ':Telescope find_files<CR>')
