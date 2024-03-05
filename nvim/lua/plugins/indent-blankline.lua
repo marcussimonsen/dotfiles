@@ -8,7 +8,7 @@ return {
 		scope = {
 			enabled = true,
 			show_start = true,
-			show_end = true,
+			show_end = false,
 		},
 	},
 	config = function(_, opts)
