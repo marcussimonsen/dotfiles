@@ -21,8 +21,9 @@ wk.register({
     }
 }, { prefix = "<Leader>" })
 
--- Generic
+-- Miscellaneous
 vim.keymap.set('n', '<Leader>n', ':noh<CR>')
+vim.keymap.set('i', 'jk', '<esc>')
 
 -- Vimwiki
 vim.keymap.set('n', '<Leader>vtt', ':VimwikiTable<CR>')
