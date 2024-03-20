@@ -1,6 +1,7 @@
 local wk = require('which-key')
 
 local telescope = require('telescope.builtin')
+local treesj = require('plugins.treesj')
 
 wk.register({
     f = { -- Telescope
@@ -18,6 +19,12 @@ wk.register({
         name = "Git (Fugitive)",
         d = { "<cmd>Gdiffsplit<CR>", "Git Diff Split" },
         g = { "<cmd>Git<CR>", "Git Summary" },
+    },
+    t = {
+        name = "TreeSJ",
+        t = { "<cmd>TSJToggle<CR>", "TreeSJ Toggle" },
+        s = { "<cmd>TSJSplit<CR>", "TreeSJ Split" },
+        j = { "<cmd>TSJJoin<CR>", "TreeSJ Join" },
     }
 }, { prefix = "<Leader>" })
 
