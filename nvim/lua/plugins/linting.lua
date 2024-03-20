@@ -10,7 +10,8 @@ return {
             python = { "pylint" },
             java = { "checkstyle" },
             markdown = { "vale" },
-            cmake = { "cmake-lint" }
+            cmake = { "cmake-lint" },
+            make = { "checkmake" }
         }
 
         local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
