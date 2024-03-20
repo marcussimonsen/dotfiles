@@ -1,7 +1,7 @@
 local wk = require('which-key')
 
 local telescope = require('telescope.builtin')
-local treesj = require('plugins.treesj')
+local trouble = require("trouble")
 
 wk.register({
     f = { -- Telescope
@@ -25,6 +25,15 @@ wk.register({
         t = { "<cmd>TSJToggle<CR>", "TreeSJ Toggle" },
         s = { "<cmd>TSJSplit<CR>", "TreeSJ Split" },
         j = { "<cmd>TSJJoin<CR>", "TreeSJ Join" },
+    },
+    x = {
+        name = "Trouble",
+        x = { function() trouble.toggle() end, "Toggle" },
+        w = { function() trouble.toggle("workspace_diagnostics") end, "Workspace Diagnostics" },
+        d = { function() trouble.toggle("document_diagnostics") end, "Document Diagnostics" },
+        q = { function() trouble.toggle("quickfix") end, "Quickfix" },
+        l = { function() trouble.toggle("loclist") end, "Loclist" },
+        r = { function() trouble.toggle("lsp_references") end, "LSP References" },
     }
 }, { prefix = "<Leader>" })
 
