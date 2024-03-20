@@ -21,6 +21,11 @@ wk.register({
         g = { "<cmd>Git<CR>", "Git Summary" },
     },
     t = {
+        name = "Todo",
+        t = { "<cmd>TodoTrouble<CR>", "Todo Trouble" },
+        f = { "<cmd>TodoTelescope<CR>", "Todo Telescope" },
+    },
+    s = {
         name = "TreeSJ",
         t = { "<cmd>TSJToggle<CR>", "TreeSJ Toggle" },
         s = { "<cmd>TSJSplit<CR>", "TreeSJ Split" },
