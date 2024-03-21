@@ -39,13 +39,13 @@ wk.register({
         q = { function() trouble.toggle("quickfix") end, "Quickfix" },
         l = { function() trouble.toggle("loclist") end, "Loclist" },
         r = { function() trouble.toggle("lsp_references") end, "LSP References" },
-    }
+    },
+    e = { require('oil').open, "Open Parent Directory" }
 }, { prefix = "<Leader>" })
 
 -- Miscellaneous
 vim.keymap.set('n', '<Leader>n', ':noh<CR>')
 vim.keymap.set('i', 'jk', '<esc>')
-vim.keymap.set('n', '-', require('oil').open, { desc = "Open Parent Directory" })
 
 -- Vimwiki
 vim.keymap.set('n', '<Leader>vtt', ':VimwikiTable<CR>')
