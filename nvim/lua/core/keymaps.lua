@@ -45,6 +45,7 @@ wk.register({
 -- Miscellaneous
 vim.keymap.set('n', '<Leader>n', ':noh<CR>')
 vim.keymap.set('i', 'jk', '<esc>')
+vim.keymap.set('n', '-', require('oil').open, { desc = "Open Parent Directory" })
 
 -- Vimwiki
 vim.keymap.set('n', '<Leader>vtt', ':VimwikiTable<CR>')
