@@ -20,6 +20,10 @@ return {
             group = lint_augroup,
             callback = function()
                 lint.try_lint()
+                -- Linters used in all filetypes
+                lint.try_lint("woke")
+                lint.try_lint("alex")
+                lint.try_lint("codespell")
             end
         })
     end
