@@ -2,6 +2,7 @@ local wk = require('which-key')
 
 local telescope = require('telescope.builtin')
 local trouble = require("trouble")
+local treesj = require('treesj');
 
 wk.register({
     f = { -- Telescope
@@ -27,9 +28,10 @@ wk.register({
     },
     s = {
         name = "TreeSJ",
-        t = { "<cmd>TSJToggle<CR>", "TreeSJ Toggle" },
-        s = { "<cmd>TSJSplit<CR>", "TreeSJ Split" },
-        j = { "<cmd>TSJJoin<CR>", "TreeSJ Join" },
+        t = { treesj.toggle, "Toggle" },
+        s = { treesj.split, "Split" },
+        j = { treesj.join, "Join" },
+        r = { function() treesj.toggle({split = {recursive = true}}) end, "Toggle Recursively"}
     },
     x = {
         name = "Trouble",
