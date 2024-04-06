@@ -31,7 +31,7 @@ wk.register({
         t = { treesj.toggle, "Toggle" },
         s = { treesj.split, "Split" },
         j = { treesj.join, "Join" },
-        r = { function() treesj.toggle({split = {recursive = true}}) end, "Toggle Recursively"}
+        r = { function() treesj.toggle({ split = { recursive = true } }) end, "Toggle Recursively" }
     },
     x = {
         name = "Trouble",
@@ -42,13 +42,11 @@ wk.register({
         l = { function() trouble.toggle("loclist") end, "Loclist" },
         r = { function() trouble.toggle("lsp_references") end, "LSP References" },
     },
-    e = { require('oil').open, "Open Parent Directory" }
 }, { prefix = "<Leader>" })
 
 -- Miscellaneous
 vim.keymap.set('n', '<Leader>n', ':noh<CR>')
 vim.keymap.set('i', 'jk', '<esc>')
 
--- Vimwiki
-vim.keymap.set('n', '<Leader>vtt', ':VimwikiTable<CR>')
-vim.keymap.set('n', '<Leader>vt ', ':VimwikiTable ')
+-- Oil
+vim.keymap.set('n', '-', require('oil').open, { desc = "Oil" })
