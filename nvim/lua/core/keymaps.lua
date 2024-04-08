@@ -49,4 +49,4 @@ vim.keymap.set('n', '<Leader>n', ':noh<CR>')
 vim.keymap.set('i', 'jk', '<esc>')
 
 -- Oil
-vim.keymap.set('n', '-', require('oil').open, { desc = "Oil" })
+vim.keymap.set('n', '-', require('mini.files').open, { desc = "Mini.files" })
