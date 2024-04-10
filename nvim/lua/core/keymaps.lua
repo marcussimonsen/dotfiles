@@ -42,11 +42,9 @@ wk.register({
         l = { function() trouble.toggle("loclist") end, "Loclist" },
         r = { function() trouble.toggle("lsp_references") end, "LSP References" },
     },
+    e = { require('mini.files').open, "File Explorer" }
 }, { prefix = "<Leader>" })
 
 -- Miscellaneous
 vim.keymap.set('n', '<Leader>n', ':noh<CR>')
 vim.keymap.set('i', 'jk', '<esc>')
-
--- Oil
-vim.keymap.set('n', '-', require('mini.files').open, { desc = "Mini.files" })
