@@ -42,7 +42,13 @@ wk.register({
         l = { function() trouble.toggle("loclist") end, "Loclist" },
         r = { function() trouble.toggle("lsp_references") end, "LSP References" },
     },
-    e = { require('mini.files').open, "File Explorer" }
+    e = { require('mini.files').open, "File Explorer" },
+    c = {
+        name = "Colorscheme",
+        k = { function() vim.cmd.colorscheme "kanagawa-wave" end, "Kanagawa-wave: Default" },
+        d = { function() vim.cmd.colorscheme "kanagawa-dragon" end, "Kanagawa-dragon: Darker" },
+        l = { function() vim.cmd.colorscheme "kanagawa-lotus" end, "Kanagawa-lotus: Light" },
+    }
 }, { prefix = "<Leader>" })
 
 -- Miscellaneous
