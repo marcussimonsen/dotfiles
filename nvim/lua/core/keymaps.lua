@@ -33,23 +33,18 @@ wk.register({
         q = { telescope.quickfix, "Quickfix" },
         t = { telescope.treesitter, "Treesitter" },
     },
-    g = { -- Fugitive
-        name = "Git (Fugitive)",
-        d = { "<cmd>Gdiffsplit<CR>", "Git Diff Split" },
-        g = { "<cmd>Git<CR>", "Git Summary" },
-    },
-    n = { function() vim.cmd("noh") end, "No highlight"},
-    t = {
-        name = "Todo",
-        t = { "<cmd>TodoTrouble<CR>", "Todo Trouble" },
-        f = { "<cmd>TodoTelescope<CR>", "Todo Telescope" },
-    },
+    n = { function() vim.cmd("noh") end, "No highlight" },
     s = {
         name = "TreeSJ",
         t = { treesj.toggle, "Toggle" },
         s = { treesj.split, "Split" },
         j = { treesj.join, "Join" },
         r = { function() treesj.toggle({ split = { recursive = true } }) end, "Toggle Recursively" }
+    },
+    t = {
+        name = "Todo",
+        t = { vim.cmd.TodoTrouble, "Todo Trouble" },
+        f = { vim.cmd.TodoTelescope, "Todo Telescope" },
     },
     x = {
         name = "Trouble",
@@ -64,3 +59,7 @@ wk.register({
 
 -- Miscellaneous
 vim.keymap.set('i', 'jk', '<esc>')
+vim.keymap.set('n', '<C-w>', ':bdelete<CR>')
+vim.keymap.set('n', '<C-n>', ':bnext<CR>')
+vim.keymap.set('n', '<C-p>', ':bprev<CR>')
+vim.keymap.set('n', '<C-h>', ':buffer')
