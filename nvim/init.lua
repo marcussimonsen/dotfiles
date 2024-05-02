@@ -6,7 +6,7 @@ require("core.settings")
 require("core.keymaps")
 
 local time = os.date("*t")
-if time.hour >= 19 or time.hour < 7 then
+if time.hour >= 17 or time.hour < 7 then
     vim.cmd.colorscheme "tokyonight-night"
 else
     vim.cmd.colorscheme "tokyonight-moon"
