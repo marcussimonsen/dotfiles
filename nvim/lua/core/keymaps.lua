@@ -6,28 +6,6 @@ local treesj = require('treesj');
 local minidiff = require('mini.diff')
 
 wk.register({
-    c = {
-        name = "Colorscheme",
-        c = {
-            l = { function() vim.cmd.colorscheme "catppuccin-latte" end, "Catppuccin Latte: Light" },
-            f = { function() vim.cmd.colorscheme "catppuccin-frappe" end, "Catppuccin Frappe: Grey" },
-            m = { function() vim.cmd.colorscheme "catppuccin-macchiato" end, "Catppuccin Macchiato: Normal" },
-            o = { function() vim.cmd.colorscheme "catppuccin-mocha" end, "Catppuccin Mocha: Darker" },
-        },
-        k = {
-            name = "Kanagawa",
-            k = { function() vim.cmd.colorscheme "kanagawa-wave" end, "Kanagawa-wave" },
-            d = { function() vim.cmd.colorscheme "kanagawa-dragon" end, "Kanagawa-dragon: Darker" },
-            l = { function() vim.cmd.colorscheme "kanagawa-lotus" end, "Kanagawa-lotus: Light" },
-        },
-        t = {
-            name = "Tokyonight",
-            m = { function() vim.cmd.colorscheme "tokyonight-moon" end, "Tokyonight-moon: Default" },
-            s = { function() vim.cmd.colorscheme "tokyonight-storm" end, "Tokyonight-storm: Lighter" },
-            n = { function() vim.cmd.colorscheme "tokyonight-night" end, "Tokyonight-night: Darker" },
-            d = { function() vim.cmd.colorscheme "tokyonight-day" end, "Tokyonight-day: Light" },
-        },
-    },
     e = { require('mini.files').open, "File Explorer" },
     f = { -- Telescope
         name = 'Telescope',
@@ -39,6 +17,7 @@ wk.register({
         c = { telescope.commands, "Commands" },
         q = { telescope.quickfix, "Quickfix" },
         t = { telescope.treesitter, "Treesitter" },
+        p = { telescope.colorscheme, "Colorscheme" },
     },
     g = {
         name = "MiniDiff",
