@@ -49,9 +49,9 @@ wk.register({
 
 -- Miscellaneous
 vim.keymap.set('i', 'jk', '<esc>')
-vim.keymap.set('n', '<C-q>', ':bdelete<CR>')
-vim.keymap.set('n', '<C-n>', ':bnext<CR>')
-vim.keymap.set('n', '<C-p>', ':bprev<CR>')
+vim.keymap.set('n', '<C-q>', function() vim.cmd("bdelete") end)
+vim.keymap.set('n', '<C-n>', function() vim.cmd("bnext") end)
+vim.keymap.set('n', '<C-p>', function() vim.cmd("bprev") end)
+vim.keymap.set('n', '<C-v>', function() vim.cmd("vsplit") end)
+vim.keymap.set('n', '<C-h>', function() vim.cmd("split") end)
 vim.keymap.set('n', '<C-c>', ':buffer')
-vim.keymap.set('n', '<C-v>', ':vsplit<CR>')
-vim.keymap.set('n', '<C-h>', ':hsplit<CR>')
