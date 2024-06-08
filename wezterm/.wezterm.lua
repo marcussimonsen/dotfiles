@@ -79,7 +79,7 @@ config.keys = {
     },
 }
 
-config.color_scheme = 'Atelier Seaside (base16)'
+config.color_scheme = 'Kanagawa (Gogh)'
 
 -- and finally, return the configuration to wezterm
 return config
