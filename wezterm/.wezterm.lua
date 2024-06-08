@@ -17,7 +17,7 @@ config.window_padding = {
 config.adjust_window_size_when_changing_font_size = false
 config.pane_focus_follows_mouse = true
 config.tab_and_split_indices_are_zero_based = true
-config.font = wezterm.font 'Hack'
+config.font = wezterm.font 'FiraCode Nerd Font'
 config.font_size = 13.0
 
 -- Custom keymaps
@@ -34,7 +34,7 @@ config.keys = {
     },
     {
         key = 'c',
-        mods = 'CTRL|SHIFT',
+        mods = 'CTRL|ALT',
         action = wezterm.action.SpawnTab 'DefaultDomain',
     },
     {
