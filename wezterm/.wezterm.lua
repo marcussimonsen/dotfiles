@@ -79,7 +79,7 @@ config.keys = {
     },
 }
 
-config.color_scheme = 'Kanagawa (Gogh)'
+config.color_scheme = 'Tokyo Night Moon'
 
 -- and finally, return the configuration to wezterm
 return config
