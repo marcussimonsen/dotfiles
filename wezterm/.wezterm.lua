@@ -14,11 +14,13 @@ config.window_padding = {
     top = 0,
     bottom = 0,
 }
-config.adjust_window_size_when_changing_font_size = false
 config.pane_focus_follows_mouse = true
 config.tab_and_split_indices_are_zero_based = true
+
+-- Font Settings
 config.font = wezterm.font 'FiraCode Nerd Font'
 config.font_size = 13.0
+config.adjust_window_size_when_changing_font_size = false
 
 -- Custom keymaps
 config.keys = {
