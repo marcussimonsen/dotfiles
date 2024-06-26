@@ -79,6 +79,11 @@ config.keys = {
         mods = 'CTRL',
         action = wezterm.action.ActivatePaneDirection 'Up',
     },
+    {
+        key = 'w',
+        mods = 'CTRL|SHIFT',
+        action = wezterm.action.DisableDefaultAssignment,
+    },
 }
 
 config.color_scheme = 'Tokyo Night Moon'
