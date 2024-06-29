@@ -4,6 +4,16 @@ local wezterm = require 'wezterm'
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
+local color_schemes = {
+    'Tokyo Night Moon',
+    'Tokyo Night Day',
+}
+-- Function for changing color scheme on the fly
+local function set_color_scheme(index, window)
+    wezterm.GLOBAL.color_scheme_index = index
+    window:set_config_overrides({ color_scheme = color_schemes[index] })
+end
+
 -- This is where you actually apply your config choices
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
@@ -23,7 +33,7 @@ config.font_size = 13.0
 config.adjust_window_size_when_changing_font_size = false
 
 -- Custom keymaps
-config.keys = {
+local keymaps = {
     {
         key = '%',
         mods = 'CTRL|SHIFT',
@@ -86,7 +96,18 @@ config.keys = {
     },
 }
 
-config.color_scheme = 'Tokyo Night Moon'
+-- Set color scheme shortcuts
+for i = 1, #color_schemes do
+    table.insert(keymaps, {
+        key = tostring(i),
+        mods = 'CTRL',
+        action = wezterm.action_callback(function(window) set_color_scheme(i, window) end)
+    })
+end
+
+config.keys = keymaps
+
+config.color_scheme = color_schemes[1]
 
 -- and finally, return the configuration to wezterm
 return config
