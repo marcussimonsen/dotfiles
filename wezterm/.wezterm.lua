@@ -99,8 +99,8 @@ local keymaps = {
 -- Set color scheme shortcuts
 for i = 1, #color_schemes do
     table.insert(keymaps, {
-        key = tostring(i),
-        mods = 'CTRL',
+        key = 'F' .. tostring(i),
+        mods = 'CTRL|SHIFT',
         action = wezterm.action_callback(function(window) set_color_scheme(i, window) end)
     })
 end
