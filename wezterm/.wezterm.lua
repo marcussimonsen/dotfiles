@@ -25,7 +25,6 @@ config.window_padding = {
     bottom = 0,
 }
 config.pane_focus_follows_mouse = true
-config.tab_and_split_indices_are_zero_based = true
 
 -- Font Settings
 config.font = wezterm.font 'FiraCode Nerd Font'
@@ -102,6 +101,14 @@ for i = 1, #color_schemes do
         key = 'F' .. tostring(i),
         mods = 'CTRL|SHIFT',
         action = wezterm.action_callback(function(window) set_color_scheme(i, window) end)
+    })
+end
+
+for i = 1, 10 do
+    table.insert(keymaps, {
+        key = tostring(i % 10),
+        mods = 'CTRL',
+        action = wezterm.action.ActivateTab(i - 1),
     })
 end
 
