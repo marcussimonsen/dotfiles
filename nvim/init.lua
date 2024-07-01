@@ -5,6 +5,8 @@ require("core.lazy")
 require("core.settings")
 require("core.keymaps")
 
+vim.opt.clipboard:append('unnamedplus')
+
 vim.cmd.colorscheme 'tokyonight-moon'
 -- Use the following to change to darker theme at night
 -- local time = os.date("*t")
