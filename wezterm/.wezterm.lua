@@ -88,9 +88,15 @@ local keymaps = {
         mods = 'CTRL',
         action = wezterm.action.ActivatePaneDirection 'Up',
     },
+    -- Disable these default keymaps
     {
         key = 'w',
         mods = 'CTRL|SHIFT',
+        action = wezterm.action.DisableDefaultAssignment,
+    },
+    {
+        key = 'Tab',
+        mods = 'CTRL',
         action = wezterm.action.DisableDefaultAssignment,
     },
 }
