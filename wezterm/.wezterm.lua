@@ -24,7 +24,6 @@ config.window_padding = {
     top = 0,
     bottom = 0,
 }
-config.pane_focus_follows_mouse = true
 
 -- Font Settings
 config.font = wezterm.font 'FiraCode Nerd Font'
