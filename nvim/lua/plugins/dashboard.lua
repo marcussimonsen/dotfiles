@@ -23,7 +23,13 @@ return {
                         group = 'Number',
                         action = 'cd ~/dotfiles | Telescope find_files',
                         key = '.',
-                    }
+                    },
+                    {
+                        desc = '󰩈 quit',
+                        group = 'ErrorMsg',
+                        action = 'q',
+                        key = 'q',
+                    },
                 },
             }
         }
