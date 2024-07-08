@@ -4,6 +4,7 @@ local telescope = require('telescope.builtin')
 local trouble = require("trouble")
 local treesj = require('treesj');
 local minidiff = require('mini.diff')
+local aerial = require('aerial')
 
 wk.register({
     e = { require('mini.files').open, "File Explorer" },
@@ -18,6 +19,7 @@ wk.register({
         q = { telescope.quickfix, "Quickfix" },
         t = { telescope.treesitter, "Treesitter" },
         p = { telescope.colorscheme, "Colorscheme" },
+        s = { require("telescope").extensions.aerial.aerial, "Symbols (Aerial)" }
     },
     g = {
         name = "MiniDiff",
@@ -45,6 +47,7 @@ wk.register({
         l = { function() trouble.toggle("loclist") end, "Loclist" },
         r = { function() trouble.toggle("lsp_references") end, "LSP References" },
     },
+    a = { function() aerial.toggle({ focus = false }) end, "Toggle Symbol overview" }
 }, { prefix = "<Leader>" })
 
 -- Miscellaneous
