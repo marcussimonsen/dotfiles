@@ -8,7 +8,7 @@ return {
     config = function()
         require('aerial').setup({
             close_automatic_events = { 'unsupported' },
-            open_automatic = true,
+            open_automatic = false,
         })
         require('telescope').load_extension('aerial')
     end
