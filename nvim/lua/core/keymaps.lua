@@ -6,55 +6,45 @@ local treesj = require('treesj');
 local minidiff = require('mini.diff')
 local aerial = require('aerial')
 
-wk.register({
-    e = { require('mini.files').open, "File Explorer" },
-    f = { -- Telescope
-        name = 'Telescope',
-        f = { telescope.find_files, "Find File" },
-        r = { telescope.oldfiles, "Recent Files" },
-        g = { telescope.live_grep, "Live Grep" },
-        b = { telescope.buffers, "Buffers" },
-        h = { telescope.help_tags, "Help Tags" },
-        c = { telescope.commands, "Commands" },
-        q = { telescope.quickfix, "Quickfix" },
-        t = { telescope.treesitter, "Treesitter" },
-        p = { telescope.colorscheme, "Colorscheme" },
-        s = { require("telescope").extensions.aerial.aerial, "Symbols (Aerial)" }
-    },
-    g = {
-        name = "MiniDiff",
-        d = { minidiff.toggle_overlay, "Toggle Overlay" },
-    },
-    n = { function() vim.cmd("noh") end, "No highlight" },
-    s = {
-        name = "TreeSJ",
-        t = { treesj.toggle, "Toggle" },
-        s = { treesj.split, "Split" },
-        j = { treesj.join, "Join" },
-        r = { function() treesj.toggle({ split = { recursive = true } }) end, "Toggle Recursively" }
-    },
-    t = {
-        name = "Todo",
-        t = { vim.cmd.TodoTrouble, "Todo Trouble" },
-        f = { vim.cmd.TodoTelescope, "Todo Telescope" },
-    },
-    x = {
-        name = "Trouble",
-        x = { function() trouble.toggle() end, "Toggle" },
-        w = { function() trouble.toggle("workspace_diagnostics") end, "Workspace Diagnostics" },
-        d = { function() trouble.toggle("document_diagnostics") end, "Document Diagnostics" },
-        q = { function() trouble.toggle("quickfix") end, "Quickfix" },
-        l = { function() trouble.toggle("loclist") end, "Loclist" },
-        r = { function() trouble.toggle("lsp_references") end, "LSP References" },
-    },
-    a = { function() aerial.toggle({ focus = false }) end, "Toggle Symbol overview" }
-}, { prefix = "<Leader>" })
+wk.add({
+    { "<Leader>a",  function() aerial.toggle({ focus = false }) end,                desc = "Aerial" },
+    { "<Leader>e",  require("mini.files").open,                                     desc = "File Explorer" },
+    { "<Leader>f",  group = "Telescope" },
+    { "<Leader>fb", telescope.buffers,                                              desc = "Buffers" },
+    { "<Leader>fc", telescope.commands,                                             desc = "Commands" },
+    { "<Leader>ff", telescope.find_files,                                           desc = "Find File" },
+    { "<Leader>fg", telescope.live_grep,                                            desc = "Live Grep" },
+    { "<Leader>fh", telescope.help_tags,                                            desc = "Help Tags" },
+    { "<Leader>fp", telescope.colorscheme,                                          desc = "Colorscheme" },
+    { "<Leader>fq", telescope.quickfix,                                             desc = "Quickfix" },
+    { "<Leader>fr", telescope.oldfiles,                                             desc = "Recent Files" },
+    { "<Leader>fs", require("telescope").extensions.aerial.aerial,                  desc = "Symbols (Aerial)" },
+    { "<Leader>ft", telescope.treesitter,                                           desc = "Treesitter" },
+    { "<Leader>g",  group = "MiniDiff" },
+    { "<Leader>gd", minidiff.toggle_overlay,                                        desc = "Toggle Overlay" },
+    { "<Leader>n",  function() vim.cmd("noh") end,                                  desc = "No highlight" },
+    { "<Leader>s",  group = "TreeSJ" },
+    { "<Leader>sj", treesj.join,                                                    desc = "Join" },
+    { "<Leader>sr", function() treesj.toggle({ split = { recursive = true } }) end, desc = "Toggle Recursively" },
+    { "<Leader>ss", treesj.split,                                                   desc = "Split" },
+    { "<Leader>st", treesj.toggle,                                                  desc = "Toggle" },
+    { "<Leader>t",  group = "Todo" },
+    { "<Leader>tf", vim.cmd.TodoTelescope,                                          desc = "Todo Telescope" },
+    { "<Leader>tt", vim.cmd.TodoTrouble,                                            desc = "Todo Trouble" },
+    { "<Leader>v",  function() vim.cmd("vsplit") end,                               desc = "Vertical Split" },
+    { "<Leader>x",  group = "Trouble" },
+    { "<Leader>xd", function() trouble.toggle("document_diagnostics") end,          desc = "Document Diagnostics" },
+    { "<Leader>xl", function() trouble.toggle("loclist") end,                       desc = "Loclist" },
+    { "<Leader>xq", function() trouble.toggle("quickfix") end,                      desc = "Quickfix" },
+    { "<Leader>xr", function() trouble.toggle("lsp_references") end,                desc = "LSP References" },
+    { "<Leader>xw", function() trouble.toggle("workspace_diagnostics") end,         desc = "Workspace Diagnostics" },
+    { "<Leader>xx", trouble.toggle,                                                 desc = "Toggle" },
+})
 
 -- Miscellaneous
 vim.keymap.set('i', 'jk', '<esc>')
 vim.keymap.set('n', '<C-q>', function() vim.cmd("bdelete") end)
 vim.keymap.set('n', '<C-n>', function() vim.cmd("bnext") end)
 vim.keymap.set('n', '<C-p>', function() vim.cmd("bprev") end)
-vim.keymap.set('n', '<Leader>v', function() vim.cmd("vsplit") end)
 vim.keymap.set('n', '<C-h>', function() vim.cmd("split") end)
 vim.keymap.set('n', '<C-c>', ':LualineBuffersJump')
