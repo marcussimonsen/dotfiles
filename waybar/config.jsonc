@@ -25,7 +25,7 @@
         "custom/power"
     ],
     // Modules configuration
-    // "sway/workspaces": {
+    // "hyprland/workspaces": {
     //     "disable-scroll": true,
     //     "all-outputs": true,
     //     "warp-on-scroll": false,
@@ -130,7 +130,7 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% 󰂄",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -164,8 +164,8 @@
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
@@ -195,9 +195,9 @@
         "format" : " ⏻ ",
 		"tooltip": false,
 		"menu": "on-click",
-		"menu-file": "/home/marcus/.config/waybar/power_menu.xml", // Menu file in resources folder - $HOME/.config/... doesn't work for whatever reason...
+		"menu-file": "/home/marcus/.config/waybar/power_menu.xml", // Menu file in resources folder - $HOME/.config/... doesn't work because path is interpreted in C++ and not in shell
 		"menu-actions": {
-			"shutdown": "shutdown",
+			"shutdown": "shutdown -P now",
 			"reboot": "reboot",
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
