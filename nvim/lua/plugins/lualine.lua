@@ -5,7 +5,8 @@ return {
         require('lualine').setup({
             tabline = {
                 lualine_a = { 'buffers' },
-                lualine_z = { 'tabs' },
+                lualine_y = { 'tabs' },
+                lualine_z = { "os.date('%a %H:%M:%S')"},
             }
         })
     end
