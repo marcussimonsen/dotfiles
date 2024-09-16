@@ -101,45 +101,38 @@ button {
 }
 
 #window,
-#workspaces {
-    margin: 0 4px;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
 
 #clock {
-    background-color: #64727D;
+    padding: 0;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    color: #ffffff;
 }
 
+#battery.full {
+    color: #7ca1f2;
+}
+
+/* Color equal to MiniDiffSignAdd */
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
+    color: #b8db87;
+}
+
+/* Color equal to DiagnosticWarn */
+#battery.warning:not(.charging) {
+    color: #ffc777;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        color: #ffffff;
     }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    color: #e26a75;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
