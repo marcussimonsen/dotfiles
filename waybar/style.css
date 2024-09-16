@@ -83,7 +83,6 @@ button {
 #battery,
 #cpu,
 #memory,
-#disk,
 #temperature,
 #backlight,
 #network,
@@ -163,39 +162,8 @@ label:focus {
     background-color: #000000;
 }
 
-#cpu {
-    background-color: #2ecc71;
-    color: #000000;
-}
-
-#memory {
-    background-color: #9b59b6;
-}
-
-#disk {
-    background-color: #964B00;
-}
-
-#backlight {
-    background-color: #90b1b1;
-}
-
-#network {
-    background-color: #2980b9;
-}
-
 #network.disconnected {
-    background-color: #f53c3c;
-}
-
-#pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
-}
-
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    color: #f53c3c;
 }
 
 #wireplumber {
@@ -221,12 +189,9 @@ label:focus {
     background-color: #ffa000;
 }
 
-#temperature {
-    background-color: #f0932b;
-}
-
+/* Color equal to MiniDiffSignRemove */
 #temperature.critical {
-    background-color: #eb4d4b;
+    color: #e26a75;
 }
 
 #tray {
