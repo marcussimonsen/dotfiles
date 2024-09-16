@@ -10,6 +10,10 @@ wk.add({
     { "<Leader>a",  function() aerial.toggle({ focus = false }) end,                desc = "Aerial" },
     { "<Leader>e",  require("mini.files").open,                                     desc = "File Explorer" },
     { "<Leader>f",  group = "Telescope" },
+    { "<Leader>fa", function() require("conform").format({
+        async = true,
+        vim.api.nvim_get_current_buf(),
+    }) end, desc = "Format file or range" },
     { "<Leader>fb", telescope.buffers,                                              desc = "Buffers" },
     { "<Leader>fc", telescope.commands,                                             desc = "Commands" },
     { "<Leader>ff", telescope.find_files,                                           desc = "Find File" },
