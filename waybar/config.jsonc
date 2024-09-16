@@ -25,22 +25,27 @@
         "custom/power"
     ],
     // Modules configuration
-    // "hyprland/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{icon}",
+        "show-special": true,
+        "format-icons": {
+            "git": "󰊢",
+            "discord": "",
+            "magic": "󰐃",
+            "music": "",
+            //"1": "",
+            //"2": "",
+            //"3": "",
+            //"4": "",
+            //"5": "",
+            //"urgent": "",
+            //"active": "",
+            //"default": ""
+        }
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
