@@ -10,3 +10,34 @@ vim.o.expandtab = true
 -- Scroll before cursor reaches screen bounds
 vim.o.scrolloff = 7
 
+-- Function to set options based on filetype
+local set_filetype_options = function()
+    local opt = vim.opt_local
+    local filetype = vim.bo.filetype
+
+    if filetype == "lua" then
+        opt.tabstop = 4
+        opt.shiftwidth = 4
+        opt.expandtab = true
+    elseif filetype == "python" then
+        opt.tabstop = 4
+        opt.shiftwidth = 4
+        opt.expandtab = true
+    elseif filetype == "cpp" then
+        opt.tabstop = 2
+        opt.shiftwidth = 2
+        opt.expandtab = true
+    elseif filetype == "java" then
+        opt.tabstop = 4
+        opt.shiftwidth = 4
+        opt.expandtab = true
+    elseif filetype == "md" then
+        opt.colorcolumn = "80"
+    end
+end
+
+-- Create an autocommand to run the function when a buffer with a certain filetype is opened
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "*",
+    callback = set_filetype_options,
+})
