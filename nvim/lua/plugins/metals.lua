@@ -8,6 +8,7 @@ return {
         local metals_config = require("metals").bare_config()
         metals_config.on_attach = function(client, bufnr)
             -- your on_attach function
+            require("metals").initialize_or_attach(metals_config)
         end
 
         return metals_config
