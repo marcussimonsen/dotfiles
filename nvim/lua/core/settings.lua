@@ -10,6 +10,8 @@ vim.o.expandtab = true
 -- Scroll before cursor reaches screen bounds
 vim.o.scrolloff = 7
 
+vim.cmd.colorscheme 'catppuccin'
+
 -- Function to set options based on filetype
 local set_filetype_options = function()
     local opt = vim.opt_local
@@ -23,6 +25,10 @@ local set_filetype_options = function()
         opt.tabstop = 4
         opt.shiftwidth = 4
         opt.expandtab = true
+    elseif filetype == "c" then
+        opt.tabstop = 2
+        opt.shiftwidth = 2
+        opt.expandtab = true
     elseif filetype == "cpp" then
         opt.tabstop = 2
         opt.shiftwidth = 2
@@ -31,8 +37,12 @@ local set_filetype_options = function()
         opt.tabstop = 4
         opt.shiftwidth = 4
         opt.expandtab = true
-    elseif filetype == "md" then
+    elseif filetype == "markdown" then
         opt.colorcolumn = "80"
+    elseif filetype == "haskell" then
+        opt.tabstop = 2
+        opt.shiftwidth = 2
+        opt.expandtab = true
     end
 end
 
