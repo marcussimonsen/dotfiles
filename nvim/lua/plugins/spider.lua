@@ -1,5 +1,10 @@
 return {
     "chrisgrieser/nvim-spider",
+    config = function ()
+        local util = require("core.utilities")
+        local spider = require("spider")
+
+    end,
     keys = {
         {
             "w",
