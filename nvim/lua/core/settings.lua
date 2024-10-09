@@ -10,7 +10,7 @@ vim.o.expandtab = true
 -- Scroll before cursor reaches screen bounds
 vim.o.scrolloff = 7
 
--- vim.o.showtabline = 2
+vim.o.showtabline = 2
 
 vim.cmd.colorscheme 'catppuccin'
 
