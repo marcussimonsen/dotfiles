@@ -7,7 +7,7 @@ return {
 		local trouble = require("trouble")
 
 		local function lazy_toggle(x)
-			return util.lazy_eval(x)
+			return util.lazy_eval(trouble.toggle, x)
 		end
 
 		trouble.setup({ focus = true })
@@ -21,6 +21,5 @@ return {
 		vim.keymap.set("n", "gd", lazy_toggle("lsp_definitions"), { desc = "LSP Definitions" })
 		vim.keymap.set("n", "gD", lazy_toggle("lsp_declarations"), { desc = "LSP Definitions" })
 		vim.keymap.set("n", "<Leader>xs", lazy_toggle("symbols"), { desc = "Symbols" })
-		vim.keymap.set("n", "<Leader>xx", trouble.toggle, { desc = "Toggle Trouble" })
 	end,
 }
