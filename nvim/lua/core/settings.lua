@@ -14,6 +14,9 @@ vim.o.showtabline = 2
 
 vim.cmd.colorscheme 'catppuccin'
 
+-- Don't show intro
+vim.opt.shortmess:append "I"
+
 -- Function to set options based on filetype
 local set_filetype_options = function()
     local opt = vim.opt_local
