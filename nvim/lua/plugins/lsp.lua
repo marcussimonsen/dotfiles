@@ -5,7 +5,7 @@ return {
 		"neovim/nvim-lspconfig",
 		"hrsh7th/nvim-cmp",
 		"hrsh7th/cmp-nvim-lsp",
-		"folke/neodev.nvim",
+        "folke/lazydev.nvim",
 	},
     event = "BufRead",
 	config = function()
