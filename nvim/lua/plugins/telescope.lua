@@ -1,7 +1,7 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	dependencies = { "nvim-lua/plenary.nvim" },
-    cmd = "Telescope",
+	cmd = "Telescope",
 	config = function()
 		local telescope = require("telescope.builtin")
 		local trouble = require("trouble.sources.telescope")
@@ -31,5 +31,6 @@ return {
 		vim.keymap.set("n", "<Leader>fs", telescope.lsp_document_symbols, { desc = "LSP Document Symbols" })
 		vim.keymap.set("n", "<Leader>fl", telescope.loclist, { desc = "Loclist" })
 		vim.keymap.set("n", "<Leader>tf", vim.cmd.TodoTelescope, { desc = "ToDo Telescope" })
+		vim.keymap.set("n", "<Leader>fw", telescope.grep_string, { desc = "Under Cursor" })
 	end,
 }
