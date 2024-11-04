@@ -5,6 +5,9 @@ return {
 		require("dashboard").setup({
 			theme = "hyper",
 			config = {
+				week_header = {
+					enable = true,
+				},
 				shortcut = {
 					{
 						desc = "󰊳 update",
@@ -17,6 +20,12 @@ return {
 						group = "label",
 						action = "Telescope find_files",
 						key = "f",
+					},
+					{
+						desc = " grep",
+						group = "DiagnosticOk",
+						action = "Telescope live_grep",
+						key = "g",
 					},
 					{
 						desc = " dotfiles",
