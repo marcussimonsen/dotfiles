@@ -18,19 +18,111 @@ return {
 				},
 			},
 		})
-
-		vim.keymap.set("n", "<Leader>fb", telescope.buffers, { desc = "Buffers" })
-		vim.keymap.set("n", "<Leader>fc", telescope.commands, { desc = "Commands" })
-		vim.keymap.set("n", "<Leader>ff", telescope.find_files, { desc = "Find File" })
-		vim.keymap.set("n", "<Leader>fg", telescope.live_grep, { desc = "Live Grep" })
-		vim.keymap.set("n", "<Leader>fh", telescope.help_tags, { desc = "Help Tags" })
-		vim.keymap.set("n", "<Leader>fp", telescope.colorscheme, { desc = "Colorscheme" })
-		vim.keymap.set("n", "<Leader>fq", telescope.quickfix, { desc = "Quickfix" })
-		vim.keymap.set("n", "<Leader>fr", telescope.oldfiles, { desc = "Recent Files" })
-		vim.keymap.set("n", "<Leader>ft", telescope.treesitter, { desc = "Treesitter" })
-		vim.keymap.set("n", "<Leader>fs", telescope.lsp_document_symbols, { desc = "LSP Document Symbols" })
-		vim.keymap.set("n", "<Leader>fl", telescope.loclist, { desc = "Loclist" })
-		vim.keymap.set("n", "<Leader>tf", vim.cmd.TodoTelescope, { desc = "ToDo Telescope" })
-		vim.keymap.set("n", "<Leader>fw", telescope.grep_string, { desc = "Under Cursor" })
 	end,
+	keys = {
+		{
+			"<Leader>fb",
+			mode = "n",
+			function()
+				vim.cmd([[Telescope buffers]])
+			end,
+			desc = "Buffers",
+		},
+		{
+			"<Leader>fc",
+			mode = "n",
+			function()
+				vim.cmd([[Telescope commands]])
+			end,
+			desc = "Commands",
+		},
+		{
+			"<Leader>ff",
+			mode = "n",
+			function()
+				vim.cmd([[Telescope find_files]])
+			end,
+			desc = "Find File",
+		},
+		{
+			"<Leader>fg",
+			mode = "n",
+			function()
+				vim.cmd([[Telescope live_grep]])
+			end,
+			desc = "Live Grep",
+		},
+		{
+			"<Leader>fh",
+			mode = "n",
+			function()
+				vim.cmd([[Telescope help_tags]])
+			end,
+			desc = "Help Tags",
+		},
+		{
+			"<Leader>fp",
+			mode = "n",
+			function()
+				vim.cmd([[Telescope colorscheme]])
+			end,
+			desc = "Colorscheme",
+		},
+		{
+			"<Leader>fq",
+			mode = "n",
+			function()
+				vim.cmd([[Telescope quickfix]])
+			end,
+			desc = "Quickfix",
+		},
+		{
+			"<Leader>fr",
+			mode = "n",
+			function()
+				vim.cmd([[Telescope oldfiles]])
+			end,
+			desc = "Recent Files",
+		},
+		{
+			"<Leader>ft",
+			mode = "n",
+			function()
+				vim.cmd([[Telescope treesitter]])
+			end,
+			desc = "Treesitter",
+		},
+		{
+			"<Leader>fs",
+			mode = "n",
+			function()
+				vim.cmd([[Telescope lsp_document_symbols]])
+			end,
+			desc = "LSP Document Symbols",
+		},
+		{
+			"<Leader>fl",
+			mode = "n",
+			function()
+				vim.cmd([[Telescope loclist]])
+			end,
+			desc = "Loclist",
+		},
+		{
+			"<Leader>tf",
+			mode = "n",
+			function()
+				vim.cmd([[TodoTelescope]])
+			end,
+			desc = "ToDo Telescope",
+		},
+		{
+			"<Leader>fw",
+			mode = "n",
+			function()
+				vim.cmd([[Telescope grep_string]])
+			end,
+			desc = "Under Cursor",
+		},
+	},
 }
