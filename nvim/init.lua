@@ -4,6 +4,7 @@ vim.g.mapleader = ' '
 require("core.lazy")
 require("core.settings")
 require("core.keymaps")
+require("core.commands")
 
 -- Use the following to change to darker theme at night
 -- local time = os.date("*t")
