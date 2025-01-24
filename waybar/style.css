@@ -7,7 +7,9 @@
     margin: 0;
 }
 
-.modules-left, .modules-center, .modules-right {
+.modules-left,
+.modules-center,
+.modules-right {
     background-color: rgba(43, 48, 59, 0.5);
     border: 3px solid rgba(100, 114, 125, 0.5);
     border-radius: 6px;
@@ -114,7 +116,8 @@ button {
 }
 
 /* Color equal to MiniDiffSignAdd */
-#battery.charging, #battery.plugged {
+#battery.charging,
+#battery.plugged {
     color: #b8db87;
 }
 
@@ -144,18 +147,15 @@ button {
 }
 
 #power-profiles-daemon.performance {
-    background-color: #f53c3c;
-    color: #ffffff;
+    color: #f53c3c;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #2980b9;
-    color: #ffffff;
+    color: #2980b9;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
+    color: #2ecc71;
 }
 
 label:focus {
@@ -198,11 +198,11 @@ label:focus {
     background-color: #2980b9;
 }
 
-#tray > .passive {
+#tray>.passive {
     -gtk-icon-effect: dim;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #eb4d4b;
 }
@@ -249,11 +249,11 @@ label:focus {
     min-width: 16px;
 }
 
-#keyboard-state > label {
+#keyboard-state>label {
     padding: 0 5px;
 }
 
-#keyboard-state > label.locked {
+#keyboard-state>label.locked {
     background: rgba(0, 0, 0, 0.2);
 }
 
@@ -262,7 +262,7 @@ label:focus {
 }
 
 #scratchpad.empty {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 #privacy {
