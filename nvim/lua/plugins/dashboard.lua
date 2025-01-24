@@ -23,6 +23,12 @@ return {
 						key = "f",
 					},
 					{
+						desc = " ToDo",
+						group = "healthWarning",
+						action = "TodoTrouble",
+						key = "t",
+					},
+					{
 						desc = " grep",
 						group = "DiagnosticOk",
 						action = "Telescope live_grep",
