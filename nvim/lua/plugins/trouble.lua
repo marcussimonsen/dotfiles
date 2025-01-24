@@ -1,7 +1,7 @@
 return {
 	"folke/trouble.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
-	event = "BufRead",
+	cmd = "Trouble",
 	config = function()
 		local util = require("core.utilities")
 		local trouble = require("trouble")
