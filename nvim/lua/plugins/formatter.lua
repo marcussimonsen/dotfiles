@@ -12,7 +12,7 @@ return {
 			},
 			formatters_by_ft = {
 				lua = { "stylua" },
-				python = { "autoflake", "black" },
+				python = { "autoflake" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				haskell = { "stylish-haskell" },
