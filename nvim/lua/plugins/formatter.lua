@@ -16,6 +16,7 @@ return {
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				haskell = { "stylish-haskell" },
+				tex = { "latexindent" },
 				markdown = { --[["cbfmt",]]
 					"mdslw",
 				},
