@@ -20,6 +20,7 @@
         "temperature",
         "backlight",
         "pulseaudio",
+        "keyboard-state",
         "battery",
         "power-profiles-daemon",
         "custom/power"
