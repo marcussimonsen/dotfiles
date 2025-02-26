@@ -15,12 +15,12 @@
     ],
     "modules-right": [
         "network",
-        "cpu",
-        "memory",
-        "temperature",
         "backlight",
         "pulseaudio",
         "keyboard-state",
+        "memory",
+        "cpu",
+        "temperature",
         "battery",
         "power-profiles-daemon",
         "custom/power"
