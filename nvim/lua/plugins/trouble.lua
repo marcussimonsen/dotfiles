@@ -3,23 +3,73 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	cmd = "Trouble",
 	config = function()
-		local util = require("core.utilities")
-		local trouble = require("trouble")
-
-		local function open(x)
-			return util.lazy_eval(trouble.open, x)
-		end
-
-		trouble.setup({ focus = true })
-
-		vim.keymap.set("n", "<Leader>xt", vim.cmd.TodoTrouble, { desc = "ToDo" })
-		vim.keymap.set("n", "<Leader>xd", open("diagnostics"), { desc = "Diagnostics" })
-		vim.keymap.set("n", "<Leader>xl", open("loclist"), { desc = "Loclist" })
-		vim.keymap.set("n", "<Leader>xq", open("quickfix"), { desc = "Quickfix" })
-		vim.keymap.set("n", "gr", open("lsp_references"), { desc = "LSP References" })
-		vim.keymap.set("n", "gi", open("lsp_implementations"), { desc = "LSP Implementations" })
-		vim.keymap.set("n", "gd", open("lsp_definitions"), { desc = "LSP Definitions" })
-		vim.keymap.set("n", "gD", open("lsp_declarations"), { desc = "LSP Definitions" })
-		vim.keymap.set("n", "<Leader>xs", open("symbols"), { desc = "Symbols" })
+		require("trouble").setup({ focus = true })
 	end,
+	keys = {
+		{ "<Leader>xt", mode = "n", vim.cmd.TodoTrouble, desc = "ToDo Trouble" },
+		{
+			"<Leader>xd",
+			mode = "n",
+			function()
+				require("trouble").open("diagnostics")
+			end,
+			desc = "Diagnostics",
+		},
+		{
+			"<Leader>xl",
+			mode = "n",
+			function()
+				require("trouble").open("loclist")
+			end,
+			desc = "Loclist",
+		},
+		{
+			"<Leader>xq",
+			mode = "n",
+			function()
+				require("trouble").open("quickfix")
+			end,
+			desc = "Quickfix",
+		},
+		{
+			"gr",
+			mode = "n",
+			function()
+				require("trouble").open("lsp_references")
+			end,
+			desc = "LSP References",
+		},
+		{
+			"gi",
+			mode = "n",
+			function()
+				require("trouble").open("lsp_implementations")
+			end,
+			desc = "LSP Implementations",
+		},
+		{
+			"gd",
+			mode = "n",
+			function()
+				require("trouble").open("lsp_definitions")
+			end,
+			desc = "LSP Definitions",
+		},
+		{
+			"gD",
+			mode = "n",
+			function()
+				require("trouble").open("lsp_declarations")
+			end,
+			desc = "LSP Declarations",
+		},
+		{
+			"<Leader>xs",
+			mode = "n",
+			function()
+				require("trouble").open("symbols")
+			end,
+			desc = "Symbols",
+		},
+	},
 }
