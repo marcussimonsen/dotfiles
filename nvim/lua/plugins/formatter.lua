@@ -6,6 +6,8 @@ return {
 
 		local conform = require("conform")
 
+        -- BUG: Doesn't start when opening a non-existing file
+
 		conform.setup({
 			default_format_opts = {
 				lsp_format = "first",
