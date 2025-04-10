@@ -14,7 +14,6 @@ return {
 	{ "<C-l>", "<C-o>A", mode = "i" },
 	{ "<C-b>", "<C-o>b", mode = "i" },
 	{ "<C-k>", "<C-o>C", mode = "i" },
-	{ "å", 'ggdG"+p:w<CR>' },
 	{
 		"<Leader>v",
 		function()
