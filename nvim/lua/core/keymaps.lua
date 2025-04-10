@@ -15,6 +15,15 @@ return {
 	{ "<C-b>", "<C-o>b", mode = "i" },
 	{ "<C-k>", "<C-o>C", mode = "i" },
 	{ "å", 'ggdG"+p:w<CR>' },
+	{
+		"<Leader>v",
+		function()
+			local pattern = vim.fn.input("Pattern: ")
+			vim.cmd(":vimgrep /" .. pattern .. "/ %")
+		end,
+		mode = "n",
+		desc = "VimGrep",
+	},
 	-- LSP keymaps
 	{ "<Leader>d", vim.diagnostic.open_float, desc = "Diagnostic float" },
 	{ "grD", vim.lsp.buf.type_definition, desc = "Type definition" },
