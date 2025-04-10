@@ -15,4 +15,10 @@ return {
 	{ "<C-b>", "<C-o>b", mode = "i" },
 	{ "<C-k>", "<C-o>C", mode = "i" },
 	{ "å", 'ggdG"+p:w<CR>' },
+	-- LSP keymaps
+	{ "<Leader>d", vim.diagnostic.open_float, desc = "Diagnostic float" },
+	{ "grD", vim.lsp.buf.type_definition, desc = "Type definition" },
+	{ "grf", vim.diagnostic.goto_next, desc = "Goto next Diagnostic" },
+	{ "grF", vim.diagnostic.goto_prev, desc = "Goto prev Diagnostic" },
+	{ "grq", vim.diagnostic.setqflist, desc = "Diagnostics -> QF" },
 }
