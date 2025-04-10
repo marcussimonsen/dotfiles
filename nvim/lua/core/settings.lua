@@ -52,6 +52,7 @@ local set_filetype_options = function()
         opt.tabstop = 2
         opt.shiftwidth = 2
         opt.expandtab = true
+        opt.colorcolumn = "80"
     end
 end
 
