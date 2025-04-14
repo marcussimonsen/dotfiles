@@ -6,7 +6,7 @@ require("core.settings")
 require("core.keymaps")
 require("core.commands")
 
-vim.lsp.enable({ "luals", "clangd", "latex", "pylsp", "marksman", "jdtls", "sqlls", "fsautocomplete", "cssls" })
+vim.lsp.enable({ "luals", "clangd", "latex", "pylsp", "marksman", "jdtls", "sqlls", "fsautocomplete", "cssls", "bashls", "hls" })
 
 -- Use the following to change to darker theme at night
 -- local time = os.date("*t")
