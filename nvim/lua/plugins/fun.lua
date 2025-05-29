@@ -14,4 +14,5 @@ return {
 			require("sudoku").setup({})
 		end,
 	},
+    { 'ThePrimeagen/vim-be-good', cmd = "VimBeGood" },
 }
