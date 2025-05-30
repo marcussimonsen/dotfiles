@@ -23,7 +23,6 @@
         "temperature",
         "battery",
         "power-profiles-daemon",
-        "custom/power"
     ],
     // Modules configuration
     "hyprland/workspaces": {
@@ -196,16 +195,4 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         //"exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
-    "custom/power": {
-        "format" : "⏻",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "/home/marcus/.config/waybar/power_menu.xml", // Menu file in resources folder - $HOME/.config/... doesn't work because path is interpreted in C++ and not in shell
-		"menu-actions": {
-			"shutdown": "shutdown -P now",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
-    }
 }
