@@ -53,6 +53,14 @@ local set_filetype_options = function()
         opt.shiftwidth = 2
         opt.expandtab = true
         opt.colorcolumn = "80"
+    elseif filetype == "yuck" then
+        opt.tabstop = 2
+        opt.shiftwidth = 2
+        opt.expandtab = true
+    elseif filetype == "toml" then
+        opt.tabstop = 2
+        opt.shiftwidth = 2
+        opt.expandtab = true
     end
 end
 
