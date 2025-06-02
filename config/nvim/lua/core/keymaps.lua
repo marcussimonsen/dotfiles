@@ -1,11 +1,5 @@
 return {
-	{
-		"<Leader>n",
-		function()
-			vim.cmd("noh")
-		end,
-		desc = "No highlight",
-	},
+	{ "<esc>", ":noh<CR>", mode = "n", desc = "No highlight" },
 	{ "jk", "<esc>", mode = "i" },
 	{ "<C-q>", vim.cmd.bdelete, desc = "Delete Buffer" },
 	{ "<C-n>", vim.cmd.bnext, desc = "Goto Next Buffer" },
