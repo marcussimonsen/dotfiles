@@ -37,7 +37,7 @@ return {
 					{
 						desc = " dotfiles",
 						group = "Number",
-						action = "cd ~/dotfiles | Telescope find_files",
+						action = "cd ~/.dotfiles | Telescope find_files",
 						key = ".",
 					},
 					{
