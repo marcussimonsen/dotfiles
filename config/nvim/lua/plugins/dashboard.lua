@@ -8,7 +8,7 @@ return {
 				week_header = {
 					enable = true,
 				},
-                footer = {},
+				footer = require("fortune").get_fortune,
 				shortcut = {
 					{
 						desc = "󰊳 update",
@@ -50,5 +50,8 @@ return {
 			},
 		})
 	end,
-	dependencies = { { "nvim-tree/nvim-web-devicons" } },
+	dependencies = {
+		"nvim-tree/nvim-web-devicons",
+		"rubiin/fortune.nvim",
+	},
 }
