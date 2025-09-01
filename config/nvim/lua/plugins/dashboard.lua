@@ -19,7 +19,7 @@ return {
 					{
 						desc = " files",
 						group = "label",
-						action = "Telescope find_files",
+						action = "Fzf files",
 						key = "f",
 					},
 					{
@@ -31,13 +31,13 @@ return {
 					{
 						desc = " grep",
 						group = "DiagnosticOk",
-						action = "Telescope live_grep",
+						action = "Fzf live_grep",
 						key = "g",
 					},
 					{
 						desc = " dotfiles",
 						group = "Number",
-						action = "cd ~/.dotfiles | Telescope find_files",
+						action = "cd ~/.dotfiles | Fzf files",
 						key = ".",
 					},
 					{
