@@ -5,6 +5,8 @@ return {
 	{ "<C-n>", vim.cmd.bnext, desc = "Goto Next Buffer" },
 	{ "<C-p>", vim.cmd.bprev, desc = "Goto Next Buffer" },
 	{ "<Tab>", "<C-w>" },
+    { "<C-j>", "<C-e>j"},
+    { "<C-k>", "<C-y>k"},
 	{ "<C-l>", "<C-o>A", mode = "i" },
 	{ "<C-b>", "<C-o>b", mode = "i" },
 	{ "<C-k>", "<C-o>C", mode = "i" },
