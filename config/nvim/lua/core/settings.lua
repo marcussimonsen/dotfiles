@@ -8,7 +8,7 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 
 -- Scroll before cursor reaches screen bounds
-vim.o.scrolloff = 7
+vim.o.scrolloff = 3
 
 vim.o.showtabline = 2
 
