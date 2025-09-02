@@ -1,8 +1,9 @@
 return {
 	cmd = { "fsautocomplete", "--adaptive-lsp-server-enabled" },
-    -- BUG: This works for finding root dir, but throws an error when doing :checkhealth vim.lsp
-	root_markers = function(name, path)
-	    return name:match('%.fsproj$') ~= nil
+	root_dir = function (bufnr, on_dir)
+	    on_dir(vim.fs.root(bufnr, function (name, _)
+	        return name:match('%.fsproj$') ~= nil
+	    end))
 	end,
 	init_options = {
 		AutomaticWorkspaceInit = true,
