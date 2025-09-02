@@ -18,12 +18,60 @@ fi
 
 # Packages to install
 PACKAGES=(
+  # Environment stuff
   hyprland
+  hypridle
+  hyprlock
+  hyprsunset
+  hyprpaper
+  hyprshot
   waybar
   rofi
-  neovim
+  wl-clipboard
+  man-db
+  man-pages
+  inotify-tools
+  usbutils
+  displaylink
   zsh
+  udev
+  udisks2
+  # Network
+  networkmanager
+  inetutils
+  iputils
+  # Bluetooth
+  bluez
+  bluez-utils
+  # Audio stuff
+  pipewire
+  wireplumber
+  pipewire-pulse
+  # Dev
+  git
+  tmux
+  neovim
+  fzf
+  # Utilities
+  ripgrep
+  htop
+  zip
+  unzip
+  rsync
+  tldr
+  z
+  bc
+  jmtpfs        # For accessing files on phone
+  power-profiles-daemon
+  # Programs
+  alacritty
   brave-bin
+  mpv
+  discord
+  evince
+  # Fun
+  sl
+  thefuck
 )
 
 # Install all packages
