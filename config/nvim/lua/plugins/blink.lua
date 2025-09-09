@@ -29,9 +29,8 @@ return {
         -- See :h blink-cmp-config-keymap for defining your own keymap
         keymap = {
             preset = 'enter',
-            -- TODO: if active then select_next else <Tab>
-            ['<Tab>'] = { 'select_next' },
-            ['<S-Tab>'] = { 'select_prev' },
+            ['<Tab>'] = { 'select_next', 'fallback' },
+            ['<S-Tab>'] = { 'select_prev', 'fallback' },
         },
 
         appearance = {
@@ -42,7 +41,7 @@ return {
 
         -- (Default) Only show the documentation popup when manually triggered
         completion = {
-            list = { selection = { preselect = false } },
+            list = { selection = { preselect = false, auto_insert = false, } },
             documentation = { auto_show = true },
         },
 
