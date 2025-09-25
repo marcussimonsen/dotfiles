@@ -144,7 +144,6 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
     },
     "custom/media": {
         "format": "{0} {1}",
