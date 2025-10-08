@@ -47,6 +47,14 @@ return {
 			end,
 			desc = "Commands",
 		},
+        {
+            "<Leader>se",
+            mode = "n",
+            function ()
+                require("fzf-lua").diagnostics_workspace()
+            end,
+            desc = "Workspace Diagnostics",
+        },
 		{
 			"<Leader>sf",
 			mode = "n",
