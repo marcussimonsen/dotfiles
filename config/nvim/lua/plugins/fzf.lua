@@ -104,14 +104,6 @@ return {
 			desc = "Marks",
 		},
 		{
-			"<Leader>sp",
-			mode = "n",
-			function()
-				require("fzf-lua").colorschemes()
-			end,
-			desc = "Colorscheme",
-		},
-		{
 			"<Leader>sq",
 			mode = "n",
 			function()
