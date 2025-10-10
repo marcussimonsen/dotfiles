@@ -24,6 +24,7 @@
         "temperature",
         "battery",
         "power-profiles-daemon",
+        "custom/sleep",
     ],
     // Modules configuration
     "hyprland/workspaces": {
@@ -156,5 +157,10 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         //"exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/sleep": {
+        "format": "󰒲",
+        "tooltip-format": "Put to sleep",
+        "on-click": "systemctl sleep",
     },
 }
