@@ -24,5 +24,7 @@ return {
 	{ "grf", vim.diagnostic.goto_next, desc = "Goto next Diagnostic" },
 	{ "grF", vim.diagnostic.goto_prev, desc = "Goto prev Diagnostic" },
 	{ "grq", vim.diagnostic.setqflist, desc = "Diagnostics -> QF" },
-    { "g.", vim.lsp.buf.code_action, desc = "Code Actions"}
+	{ "g.", vim.lsp.buf.code_action, desc = "Code Actions" },
+	-- LaTeX
+	{ "<Leader>no", "O\\noindent<esc>" },
 }
