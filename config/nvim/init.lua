@@ -8,6 +8,11 @@ require("core.commands")
 
 vim.lsp.enable({ "luals", "clangd", "latex", "pylsp", "marksman", "jdtls", "sqlls", "fsautocomplete", "cssls", "bashls", "hls", "gopls" })
 
+-- Allow project-local .nvimrc or .exrc files
+vim.opt.exrc = true
+-- Prevent unsafe commands from running automatically
+vim.opt.secure = true
+
 -- Use the following to change to darker theme at night
 -- local time = os.date("*t")
 -- if time.hour >= 17 or time.hour < 7 then
