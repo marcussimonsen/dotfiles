@@ -6,7 +6,7 @@ require("core.settings")
 require("core.keymaps")
 require("core.commands")
 
-vim.lsp.enable({ "luals", "clangd", "latex", "pylsp", "marksman", "jdtls", "sqlls", "fsautocomplete", "cssls", "bashls", "hls", "gopls" })
+vim.lsp.enable({ "lua_ls", "clangd", "latex", "pylsp", "marksman", "jdtls", "sqlls", "fsautocomplete", "cssls", "bashls", "hls", "gopls" })
 
 -- Allow project-local .nvimrc or .exrc files
 vim.opt.exrc = true
