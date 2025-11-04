@@ -24,6 +24,7 @@
         "temperature",
         "battery",
         "power-profiles-daemon",
+        "custom/autoidle",
         "custom/sleep",
     ],
     // Modules configuration
@@ -157,6 +158,13 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         //"exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/autoidle": {
+        "exec": "~/.config/waybar/scripts/autoidle.py",
+        "return-type": "json",
+        "interval": 60,
+        "format": "{} ",
+        "on-click": "~/.config/waybar/scripts/autoidle.py toggle"
     },
     "custom/sleep": {
         "format": "󰒲",
