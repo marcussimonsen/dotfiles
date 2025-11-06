@@ -1,18 +1,6 @@
 return {
 	"ibhagwan/fzf-lua",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
-	-- config = function()
-	-- 	require("fzf-lua").setup({
-	-- 		keymap = {
-	-- 			fzf = {
-	-- 				true,
-	-- 				["alt-t"] = function()
-	-- 					require("trouble.sources.fzf").open()
-	-- 				end,
-	-- 			},
-	-- 		},
-	-- 	})
-	-- end,
 	cmd = "FzfLua",
 	keys = {
         {
