@@ -26,5 +26,5 @@ return {
 	{ "grq", vim.diagnostic.setqflist, desc = "Diagnostics -> QF" },
 	{ "g.", vim.lsp.buf.code_action, desc = "Code Actions" },
 	-- LaTeX
-	{ "<Leader>no", "O\\noindent<esc>" },
+	{ "<Leader>no", "O\\noindent<esc>j" },
 }
