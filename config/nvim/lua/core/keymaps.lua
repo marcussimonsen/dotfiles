@@ -21,8 +21,8 @@ return {
 	-- LSP keymaps
 	{ "<Leader>d", vim.diagnostic.open_float, desc = "Diagnostic float" },
 	{ "grD", vim.lsp.buf.type_definition, desc = "Type definition" },
-	{ "grf", vim.diagnostic.goto_next, desc = "Goto next Diagnostic" },
-	{ "grF", vim.diagnostic.goto_prev, desc = "Goto prev Diagnostic" },
+	{ "grf", function() vim.diagnostic.jump({count=1, float=true}) end, desc = "Goto next Diagnostic" },
+	{ "grF", function () vim.diagnostic.jump({count=-1, float=true}) end, desc = "Goto prev Diagnostic" },
 	{ "grq", vim.diagnostic.setqflist, desc = "Diagnostics -> QF" },
 	{ "g.", vim.lsp.buf.code_action, desc = "Code Actions" },
 	-- LaTeX
