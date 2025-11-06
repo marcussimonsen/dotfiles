@@ -27,5 +27,6 @@ return {
 	{ "g.", vim.lsp.buf.code_action, desc = "Code Actions" },
 	-- LaTeX
 	{ "<Leader>no", "O\\noindent<esc>j" },
+    -- NOTE: This is only useful for grading and should be removed when done grading this semester
     { 'å', 'ggdG"+p:lua require("conform").format()<CR>:w<CR>'}
 }
