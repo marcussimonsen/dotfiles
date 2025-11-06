@@ -12,7 +12,7 @@ vim.o.scrolloff = 3
 
 vim.o.showtabline = 2
 
-vim.cmd.colorscheme 'catppuccin'
+vim.cmd.colorscheme 'tokyonight-moon'
 
 -- Don't show intro
 vim.opt.shortmess:append "I"
