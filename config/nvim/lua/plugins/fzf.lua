@@ -15,6 +15,14 @@ return {
 	-- end,
 	cmd = "FzfLua",
 	keys = {
+        {
+            "<Leader>s<CR>",
+            mode = "n",
+            function ()
+                require("fzf-lua").resume()
+            end,
+            desc = "Fzf resume",
+        },
 		{
 			"<Leader>s<Leader>",
 			mode = "n",
