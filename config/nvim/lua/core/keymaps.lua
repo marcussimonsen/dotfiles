@@ -27,5 +27,5 @@ return {
 	{ "g.", vim.lsp.buf.code_action, desc = "Code Actions" },
 	-- LaTeX
 	{ "<Leader>no", "O\\noindent<esc>j" },
-    { 'å', 'ggdG"+p:w<CR>'}
+    { 'å', 'ggdG"+p:lua require("conform").format()<CR>:w<CR>'}
 }
